@@ -5,8 +5,10 @@ import VideoDetail from './components/video_detail';
 import YTSearch from 'youtube-api-search';
 import SearchBar from './components/search_bar';
 import VideoList from './components/video_list';
-const API_KEY = 'AIzaSyCNLm4Qf8Xj-p05A1tDxBJabhRTZKDe1po';
 
+//enter google api key here
+//and turn on youtube search in api manager
+const API_KEY = '';
 
 class App extends Component {
   constructor(props){
@@ -32,7 +34,7 @@ class App extends Component {
 
   render(){
     const videoSearch = _.debounce((term)=>{this.videoSearch(term)}, 300);
-    
+
     return (
     <div>
       <SearchBar onSearchTermChange={videoSearch} />
